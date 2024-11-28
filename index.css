@@ -1,0 +1,168 @@
+/* CSS Variables */
+:root {
+    --header-color: rgba(250, 2, 134, 0.855);
+    --padding: 20px;
+    --text-color: #fff;
+}
+::selection {
+    background-color: rgb(252, 3, 186);
+    color: white;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    background-color: rgba(0, 0, 0, 0.943);
+    color: white;
+    font-family: "Spectral", serif;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: var(--header-color);
+    padding: var(--padding);
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2rem;
+    font-family: "Satisfy", cursive;
+}
+
+main {
+    min-height: 70vh;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+main form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    color: var(--text-color);
+}
+
+form input[type='text'] {
+    background-color: transparent;
+    border: 2px solid white;
+    padding: 12px;
+    flex-grow: 1;
+    border-radius: 12px;
+    margin-right: 12px;
+    color: var(--text-color);
+    font-size: 15px;
+    outline: none;
+}
+
+form input[type='text'],
+button[type='submit'], .result div a {
+    padding: 10px;
+    background-color: transparent;
+    border: 2px solid white;
+    color: var(--text-color);
+    border-radius: 12px;
+    outline: none;
+    cursor: pointer;
+}
+
+footer {
+    background-color: var(--header-color);
+    padding: 12px;
+    text-align: center;
+    font-size: 18px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.result {
+    background-color: rgba(52, 50, 50, 0.449);
+    padding: 14px;
+    border-radius: 22px;
+    max-width: 80%;
+    text-align: start;
+    margin: 20px auto;
+    font-family:'Courier New', Courier, monospace;
+}
+
+.result div{
+    margin-top: 32px;
+
+}
+.result p {
+    margin-top: 6px;
+}
+
+.result-link {
+    text-decoration: none;
+    color: rgb(255, 0, 191);
+    padding: 2px;
+}
+
+
+.copy {
+    font-family: "Satisfy", cursive;
+}
+
+/* Responsive adjustments */
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+    
+    main {
+        padding: 10px;
+    }
+    
+    form input[type='text'] {
+        font-size: 14px;
+        padding: 10px;
+        margin-right: 8px;
+    }
+    
+    form input[type='text'],
+    button[type='submit'] {
+        padding: 8px;
+        font-size: 14px;
+    }
+    
+    .result {
+        padding: 12px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.2rem;
+    }
+    
+    .result {
+        max-width: 90%;
+        padding: 10px;
+    }
+    
+    form {
+        flex-direction: column;
+    }
+    
+    form input[type='text'] {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    
+    footer {
+        font-size: 16px;
+        padding: 8px;
+    }
+}
